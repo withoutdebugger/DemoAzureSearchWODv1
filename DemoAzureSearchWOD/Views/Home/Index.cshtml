@@ -1,0 +1,72 @@
+﻿@model Microsoft.Azure.Search.Models.DocumentSearchResult<DemoAzureSearchWOD.Models.Hotel>
+@using Microsoft.Azure.Search.Models;
+@using DemoAzureSearchWOD.Models;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row invisible" id="pagerId">
+    <div class="col-md-12 col-lg-12">
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4 col-lg-4 col-xl-4 invisible" id="pillsId">
+
+            <div class="font-weight-light" id="lblSearch"></div>
+            <br />
+
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <h4>Filters</h4>
+                    <hr />
+                    <div id="pills-filter">
+
+                    </div>
+
+                </div>
+            </div><br />
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <h5 style="text-transform: capitalize">City</h5>
+                    <hr />
+                    <div id="pills-city">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <h5 style="text-transform: capitalize">Type</h5>
+                    <hr />
+                    <div id="pills-type">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <h5 style="text-transform: capitalize">Tags</h5>
+                    <hr />
+                    <div id="pills-tags">
+                    </div>
+                </div>
+            </div>
+
+    </div>
+
+    <div class="col-md-8 col-lg-8 col-xl-8">
+
+        <div class="card-columns" id="cardsId">
+
+        </div>
+
+    </div>
+
+</div>
