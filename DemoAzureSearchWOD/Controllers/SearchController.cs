@@ -33,11 +33,11 @@ namespace DemoAzureSearchWOD.Controllers
                                                     string orderby = "", string orderbydirection = "desc", int actualPage = 1)
         {
             //Filter
-            string filter = CreateFilter(cityFacet, typeFacet);
+            string filter = CreateFilterFacets(cityFacet, typeFacet);
             //OrderBy
             IList<string> orderBy = CreateOrderBy(orderby, orderbydirection);
             //Filter Tags
-            IList<ScoringParameter> filterTags = CreatedFilterTags(tags);
+            IList<ScoringParameter> filterTags = CreateFilterTags(tags);
             //Parameters
             SearchParameters sp = CreateParameter(10, filter, orderBy, filterTags, actualPage);
             //Search
@@ -48,7 +48,7 @@ namespace DemoAzureSearchWOD.Controllers
 
         #region privates
 
-        private string CreateFilter(string cityFacet, string typeFacet) {
+        private string CreateFilterFacets(string cityFacet, string typeFacet) {
 
             string filter = "";
  
@@ -80,7 +80,7 @@ namespace DemoAzureSearchWOD.Controllers
 
         }
 
-        private IList<ScoringParameter> CreatedFilterTags(string tags) {
+        private IList<ScoringParameter> CreateFilterTags(string tags) {
 
             IList<ScoringParameter> _parameterTags = new List<ScoringParameter>();
 

@@ -28,8 +28,6 @@ namespace DemoAzureSearchWOD
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
-
-            //ConfigurationSection _sectionAzureSearch =  Configuration.GetSection("AzureSearch:SearchServiceName");
             services.AddSingleton<IConfiguration>(Configuration);
             services.AddMvc();
         }
